@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
-import { useParams, useHistory } from 'react-router-dom';
-import Spinner from './components/Spinner'
+import { useParams} from 'react-router-dom';
+// import Spinner from './components/Spinner'
 
 const AlbumView = () => {
     const { id } = useParams()
-    const history = useHistory()
+    // const history = useHistory()
     const [ albumData, setAlbumData ] = useState([])
 
     useEffect(() => {
@@ -17,14 +17,14 @@ const AlbumView = () => {
         fetchData()
     }, [id])
 
-    const navButtons = () => {
-        return (
-            <div>
-                <button onClick={() => {history.push('/')}}>Home</button> |
-                <button onClick={() => {history.goBack()}}>Back</button>
-            </div>
-        )
-    }
+    // const navButtons = () => {
+    //     return (
+    //         <div>
+    //             <button onClick={() => {history.push('/')}}>Home</button> |
+    //             <button onClick={() => {history.goBack()}}>Back</button>
+    //         </div>
+    //     )
+    // }
 
     const allSongs = albumData.filter(entity => entity.kind === 'song')
     .map((album, i) => {
@@ -37,8 +37,8 @@ const AlbumView = () => {
 
     return (
         <div>
-            {albumData.length > 0 ? <h2>{albumData[0].collectionName}</h2> : <Spinner />}
-            {navButtons()}
+            {albumData.length > 0 ? <h2>{albumData[0].collectionName}</h2> : <p>Error</p>}
+            {/* {navButtons()} */}
             {allSongs}
         </div>
     )
