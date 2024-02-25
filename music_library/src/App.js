@@ -2,8 +2,8 @@ import {useEffect, useState} from 'react';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Gallery from './components/gallery';
 import Searchbar from './components/searchbar';
-import {AlbumView} from './components/AlbumView'
-import {ArtistView} from './components/ArtistView'
+import AlbumView from './components/AlbumView'
+import ArtistView from './components/ArtistView'
 import {Fragment} from 'react';
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
   let [data, setData] = useState([])
   
 
-  const API_URL= 'https://github.com/HackerUSA-CE/RR-Improve-a-Music-Library-Interface.git'
+  const API_URL= 'https://itunes.apple.com/search?term='
 
   useEffect(() => {
     if(search) {
