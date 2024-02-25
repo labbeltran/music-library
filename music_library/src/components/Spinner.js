@@ -1,4 +1,4 @@
-import loading from './components/loading-buffering.gif'
+import loading from './loading-buffering.js'
 
 const Spinner = () => {
     return (
