@@ -1,6 +1,6 @@
 import {useRef, useState, useEffect, Suspense} from 'react';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-import Gallery from './components/gallery';
+import Gallery from './components/Gallery';
 import Searchbar from './components/searchbar';
 import AlbumView from './components/AlbumView'
 import ArtistView from './components/ArtistView'
